@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Semana7.Vistas.Inicio"
+             Title="Inicio">
+    <VerticalStackLayout>
+        <Label 
+            Text="Consumo de servicio WEB - GET"
+            FontSize="20"
+            HorizontalTextAlignment="Center"/>
+
+        <ListView x:Name="listaestudiantes" ItemSelected="listaestudiantes_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lblNombre" Text="{Binding nombre}"/>
+                            <Label x:Name="lblApellido" Text="{Binding apellido}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        
+        </ListView>
+
+        <Button x:Name="btnAgregar" Text="Agregar Estudiante" Clicked="btnAgregar_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
