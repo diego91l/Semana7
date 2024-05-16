@@ -9,13 +9,50 @@
             FontSize="20"
             HorizontalTextAlignment="Center"/>
 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lblCodigo" Text="Codigo" TextColor="Red" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="lblNombre" Text="Nombre" TextColor="Red" Grid.Row="0" Grid.Column="1"/>
+            <Label x:Name="lblApellido" Text="Apellido" TextColor="Red" Grid.Row="0" Grid.Column="2"/>
+            <Label x:Name="lblEdad" Text="Edad" TextColor="Red" Grid.Row="0" Grid.Column="3"/>
+
+        </Grid>
+
         <ListView x:Name="listaestudiantes" ItemSelected="listaestudiantes_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout>
-                            <Label x:Name="lblNombre" Text="{Binding nombre}"/>
-                            <Label x:Name="lblApellido" Text="{Binding apellido}"/>
+                        <StackLayout BackgroundColor="LightYellow">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblCodigo" Text="{Binding codigo}" Grid.Row="0" Grid.Column="0"/>
+                                <Label x:Name="lblNombre" Text="{Binding nombre}" Grid.Row="0" Grid.Column="1"/>
+                                <Label x:Name="lblApellido" Text="{Binding apellido}" Grid.Row="0" Grid.Column="2"/>
+                                <Label x:Name="lblEdad" Text="{Binding edad}" Grid.Row="0" Grid.Column="3"/>
+                            </Grid>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -23,7 +60,9 @@
         
         </ListView>
 
-        <Button x:Name="btnAgregar" Text="Agregar Estudiante" Clicked="btnAgregar_Clicked"/>
+        <Button x:Name="btnAgregar" Text="Agregar Estudiante" Padding="0" 
+                Margin="0,30,0,0" HorizontalOptions="Fill" 
+                VerticalOptions="Center" CornerRadius="20" FontSize="20" Clicked="btnAgregar_Clicked"/>
 
-    </VerticalStackLayout>
+    </VerticalStackLayout>  
 </ContentPage>

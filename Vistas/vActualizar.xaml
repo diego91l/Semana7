@@ -17,9 +17,9 @@
 
         <Entry x:Name="txtEdad" Placeholder="Ingrese el rdad" />
 
-        <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked"/>
+        <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" BackgroundColor="DarkGray" Margin="0,20,0,0"/>
 
-        <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked"/>
+        <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked" BackgroundColor="DarkGray" Margin="0,20,0,0"/>
         
         
     </VerticalStackLayout>
